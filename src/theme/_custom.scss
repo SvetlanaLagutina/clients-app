@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  color: var(--text-color);
+  line-height: 1.5;
+  background-color: white;
+}
+
+.btn-group {
+  button {
+      border-radius: 37px;
+      padding: 16px 22px;
+      height: 53px;
+      border: none;
+      .submit {
+          width: 134px;
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 16px;
+          color: #fff;
+          background: #2f67d5;
+          &:disabled {
+            background: #d8dee9;
+        }
+      }
+      .cancel {
+          width: 109px;
+          border: none;
+          color: #2F67D5;
+          background: #fff;
+      }
+  }
+}
+.p-component {
+  font-family: 'Roboto';
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1{
+  font-weight: 500;
+  font-size: 28px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+label {
+  font-size: 14px;
+
+  span.required {
+    color: var(--accent-color);
+    font-weight: 500;
+  }
+}
+
+//
+// SCROLLING
+//
+
+::-webkit-scrollbar-track {
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: var(--very-light-grey-color);
+  border: 1px solid var(--light-grey-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: var(--main-color);
+}

@@ -1,0 +1,26 @@
+<form [formGroup]="form" class="col" (ngSubmit)="submit()">
+  <div class="form-item col">
+    <label for="name"> Имя </label>
+    <input pInputText formControlName="name" type="text" placeholder="Имя" />
+    <field-error fieldName="name"></field-error>
+  </div>
+  <div class="form-item col">
+    <label for="surname"> Фамилия </label>
+    <input pInputText formControlName="surname" type="text" placeholder="Фамилия" />
+    <field-error fieldName="surname"></field-error>
+  </div>
+  <div class="form-item col">
+    <label for="email"> E-mail </label>
+    <input pInputText formControlName="email" type="text" placeholder="E-mail" />
+    <field-error fieldName="email"></field-error>
+  </div>
+  <div class="form-item col">
+    <label for="phone"> Телефон </label>
+    <p-inputMask formControlName="phone" mask="+7 (999) 999-99-99" placeholder="Телефон"></p-inputMask>
+    <field-error fieldName="phone"></field-error>
+  </div>
+  <div class="btn-group row">
+    <button pButton label="Отмена" type="button" class="cancel p-button-outlined" (click)="cancel()"></button>
+    <button pButton label="Сохранить" type="submit" class="submit" [disabled]="form.invalid"></button>
+  </div>
+</form>

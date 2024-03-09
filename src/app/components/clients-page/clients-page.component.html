@@ -1,0 +1,98 @@
+<div class="wrapper">
+  <div class="title-bar">
+    <h1>Клиенты</h1>
+  </div>
+  <div class="table-block">
+    <div class="buttons-block">
+      <button
+        pButton
+        pTooltip="Добавить клиента"
+        tooltipPosition="right"
+        class="add-btn p-button-icon-only p-button-rounded p-button-text"
+        (click)="showCreateModal()"
+      >
+        <img src="/assets/svg/add.svg" />
+      </button>
+      <p-confirmDialog #cd [style]="{ width: '20vw', height: '30vh' }">
+        <ng-template pTemplate="header">
+          <h2>Удаление строк</h2>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+          <div class="btn-group">
+            <button
+              type="button"
+              pButton
+              label="Отмена"
+              type="button"
+              class="cancel p-button-outlined"
+              (click)="cd.reject()"
+            ></button>
+            <button type="button" pButton label="Удалить" type="submit" class="submit" (click)="cd.accept()"></button>
+          </div>
+        </ng-template>
+      </p-confirmDialog>
+
+      <button
+        pButton
+        pTooltip="Удалить"
+        tooltipPosition="right"
+        class="delete-btn p-button-icon-only p-button-rounded p-button-text"
+        [disabled]="selectedClients.length === 0"
+        (click)="showDeleteConfirm()"
+      >
+        <img src="/assets/svg/delete.svg" />
+      </button>
+    </div>
+
+    <p-table
+      *ngIf="clientsList$ | async as users; else loading"
+      [value]="users"
+      (selectionChange)="selectionChange($event)"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="name">
+            <div class="row">
+              Имя
+              <p-sortIcon field="name"></p-sortIcon>
+            </div>
+          </th>
+          <th>
+            <div class="row">Фамилия</div>
+          </th>
+
+          <th pSortableColumn="email" style="text-align: right">
+            <div>
+              E-mail
+              <p-sortIcon field="email"></p-sortIcon>
+            </div>
+          </th>
+          <th pSortableColumn="phone" style="text-align: right">
+            <div>
+              Телефон
+              <p-sortIcon field="phone"></p-sortIcon>
+            </div>
+          </th>
+          <th style="width: 30%"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>
+            <div class="author row">
+              <p-tableCheckbox [value]="item"></p-tableCheckbox>
+              <a pTooltip="Редактировать" tooltipPosition="right" (click)="showEditModal(item)"> {{ item.name }} </a>
+            </div>
+          </td>
+          <td>{{ item.surname }}</td>
+          <td style="text-align: right">{{ item.email }}</td>
+          <td style="text-align: right">{{ item.phone }}</td>
+          <td></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <ng-template #loading> Загрузка... </ng-template>
+  <p-messages [value]="msgs" [showTransitionOptions]="'500ms'" [hideTransitionOptions]="'500ms'"></p-messages>
+</div>

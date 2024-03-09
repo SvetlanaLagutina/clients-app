@@ -1,0 +1,67 @@
+.wrapper {
+    background-color: #E9F3FF;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    .title-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 12px;
+        background-color: #E9F3FF;
+        color: #2F7FD5;
+        height: 91px;
+        margin: 0 16px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 28px;
+        z-index: 10;
+    }
+    .table-block{
+        border-radius: 20px;
+        background-color: #FFF;
+        margin: 0 16px 0 16px;
+        padding-bottom: 20px;
+        .buttons-block {
+            height: 56px;
+            display: flex;
+            align-items:center;
+            path:disabled {
+                fill:#A8B0BF;
+            }
+        }
+    }
+    p-table::ng-deep {
+        .p-datatable .p-datatable-tbody > tr > th {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            color: #263238;
+        }
+        .p-datatable .p-datatable-thead > tr > th {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            color: #2f4c97;
+            background: #fff;
+        }
+    }
+    a {
+        margin-left: 16px;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #8FAFFF;
+        }
+    }
+    .p-confirmDialog::ng-deep {
+        border-radius: 20px;
+        width: 448px;
+        height: 300px;
+        padding: 44px 40px;
+        .btn-group {
+            margin-top: 100px;
+            margin-left: 180px;
+        }
+    }
+}

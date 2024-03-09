@@ -1,0 +1,22 @@
+:host {
+  align-self: flex-end;
+  word-break: break-word;
+  display: block;
+  position: relative;
+  text-align: right;
+  margin-right: 40px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.error-item {
+  color: #da1b1b;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  padding: 4px 16px 0px 16px;
+  width: 368px;
+  height: 20px;
+}
