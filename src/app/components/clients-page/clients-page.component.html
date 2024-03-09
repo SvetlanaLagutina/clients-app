@@ -11,7 +11,7 @@
         class="add-btn p-button-icon-only p-button-rounded p-button-text"
         (click)="showCreateModal()"
       >
-        <img src="/assets/svg/add.svg" />
+        <img src="../assets/svg/add.svg" />
       </button>
       <p-confirmDialog #cd [style]="{ width: '20vw', height: '30vh' }">
         <ng-template pTemplate="header">
@@ -41,7 +41,7 @@
         [disabled]="selectedClients.length === 0"
         (click)="showDeleteConfirm()"
       >
-        <img src="/assets/svg/delete.svg" />
+        <img src="../assets/svg/delete.svg" />
       </button>
     </div>
 
