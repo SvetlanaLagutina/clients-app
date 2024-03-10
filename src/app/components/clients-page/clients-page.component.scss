@@ -54,14 +54,8 @@
             color: #8FAFFF;
         }
     }
-    .p-confirmDialog::ng-deep {
+    p-confirmDialog::ng-deep {
         border-radius: 20px;
-        width: 448px;
-        height: 300px;
         padding: 44px 40px;
-        .btn-group {
-            margin-top: 100px;
-            margin-left: 180px;
-        }
     }
 }

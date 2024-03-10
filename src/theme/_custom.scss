@@ -11,6 +11,8 @@ body {
 }
 
 .btn-group {
+  margin: 25px 16px 8px 16px;
+  align-self:flex-end;
   button {
       border-radius: 37px;
       padding: 16px 22px;
@@ -35,8 +37,41 @@ body {
       }
   }
 }
+
 .p-component {
   font-family: 'Roboto';
+}
+
+.p-confirm-dialog {
+  min-width: 448px;
+  min-height: 300px;
+  border-radius: 20px;
+  
+  h2{
+    margin: 16px 16px 0 16px;
+  }
+  .btn-group {
+    margin: 25px 16px 16px 16px;
+  }
+ 
+  .p-dialog-footer {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.p-dialog {
+  .p-dialog-header {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    .p-dialog-title{
+      margin: 16px 16px 0 16px;
+    }
+  }
+  .p-dialog-content:last-of-type {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+  }
 }
 
 .container {
