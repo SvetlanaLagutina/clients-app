@@ -1,27 +1,46 @@
-# InitiumApp
+Тестовое задание Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+Для разработчика Front-end
 
-## Development server
+Цель настоящего тестового задания — оценить ваши навыки и знания по
+разработке с использованием Angular, включая понимание технического задания.
+Задача
+Вам необходимо разработать простое веб-приложение для отображения таблицы с
+записями, полученными с помощью API. Допускается использование любых сторонних
+библиотек, однако необходимо предоставить обоснование выбора каждой из них.
+Приложение должно иметь следующие функции:
+1. Сделать верстку по дизайну:
+  - https://www.figma.com/file/e7KSLDJU0l96avRM3tQfaT/Тестовое-задание-Initiu
+m?node-id=3%3A9
+2. Начальная загрузка записей при первом запуске приложения:
+  - GET запрос https://test-data.directorix.cloud/task1
+3. Добавление записей:
+  - Пользователь должен иметь возможность создавать новые записи в
+таблице, через модальное окно.
+4. Изменение записей:
+  - Пользователь должен иметь возможность изменить в записи какие либо
+данные, через модальное окно.
+5. Удаление записей:
+- Пользователь должен иметь возможность выбрать несколько (или одну)
+записей и удалить из таблицы.
+6. При создании новых записей реализовать проверку полей по написанию и
+валидности, а то есть:
+  - Поле Имя должно быть обязательным, минимум 2-а символа.
+  - Поле Фамилия должно быть обязательным, минимум 2-а символа.
+  - Поле Email должно быть обязательным и валидным как email.
+  - Поле телефон должно быть валидным для номеров российских операторов
+связи.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Требования
+- Используйте Angular v16 для разработки приложения.
+- Используйте TypeScript.
+- Используйте стилизацию с помощью SCSS.
+- Используйте компоненты Angular для разделения логики и представления.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Бонусные задания (не обязательно, но будет плюсом)
+1. Фильтрация и сортировка данных.
+  - Добавьте возможность фильтровать/сортировать записи по имени / почте /
+телефону по алфавиту.
+2. Локальное хранилище.
+  - Сделайте так, чтобы данные таблицы сохранялись в локальном хранилище
+браузера, чтобы они не исчезали при перезагрузке страницы.

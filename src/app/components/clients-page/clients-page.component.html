@@ -13,6 +13,17 @@
       >
         <img src="assets/svg/add.svg" />
       </button>
+
+      <button
+        pButton
+        pTooltip="Удалить"
+        tooltipPosition="right"
+        class="delete-btn p-button-icon-only p-button-rounded p-button-text"
+        [disabled]="selectedClients.length === 0"
+        (click)="showDeleteConfirm()"
+      >
+        <img src="assets/svg/delete.svg" />
+      </button>
       <p-confirmDialog #cd [style]="{ width: '20vw', height: '30vh' }">
         <ng-template pTemplate="header">
           <h2>Удаление строк</h2>
@@ -32,17 +43,6 @@
           </div>
         </ng-template>
       </p-confirmDialog>
-
-      <button
-        pButton
-        pTooltip="Удалить"
-        tooltipPosition="right"
-        class="delete-btn p-button-icon-only p-button-rounded p-button-text"
-        [disabled]="selectedClients.length === 0"
-        (click)="showDeleteConfirm()"
-      >
-        <img src="assets/svg/delete.svg" />
-      </button>
     </div>
 
     <p-table
